@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101012">
+  <title>Vice / Versa — Poster Studio</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#" aria-label="Vice Versa home"><span class="brand-mark">V</span><span>VICE<span class="slash">/</span>VERSA</span></a><span class="offline"><i></i> LOCAL STUDIO</span><span class="top-note">YOUR CITY. YOUR STORY.</span></header>
+  <main class="layout">
+    <section class="editor" aria-label="Poster editor">
+      <div class="eyebrow">POSTER STUDIO <span>01 — CREATE</span></div>
+      <h1>Make your<br><em>moment</em> iconic.</h1>
+      <p class="intro">A little Vice City energy. All you.</p>
+      <div class="step-title"><span class="step">01</span><div><b>Build your scene</b><small>Choose a photo for each frame</small></div></div>
+      <div class="photo-list">
+        <label class="photo-row"><span class="thumb" id="thumb0"></span><span class="photo-meta"><b>01 · THE SCENE</b><small id="name0">Ocean Drive</small></span><button type="button" class="replace" data-panel="0">Replace</button><input class="filepick" type="file" accept="image/*" data-panel="0"></label>
+        <label class="photo-row"><span class="thumb" id="thumb1"></span><span class="photo-meta"><b>02 · AFTER HOURS</b><small id="name1">Last light</small></span><button type="button" class="replace" data-panel="1">Replace</button><input class="filepick" type="file" accept="image/*" data-panel="1"></label>
+        <label class="photo-row"><span class="thumb" id="thumb2"></span><span class="photo-meta"><b>03 · THE GETAWAY</b><small id="name2">Blue hour</small></span><button type="button" class="replace" data-panel="2">Replace</button><input class="filepick" type="file" accept="image/*" data-panel="2"></label>
+      </div>
+      <div class="step-title second"><span class="step">02</span><div><b>Say it your way</b><small>Your headline makes the cover</small></div></div>
+      <label class="caption-wrap"><span class="field-label">HEADLINE <span id="charCount">0 / 28</span></span><input id="caption" type="text" maxlength="28" value="AFTER THE GLOW" aria-label="Poster headline"></label>
+      <div class="options">
+        <label><span class="field-label">FORMAT</span><select id="format"><option value="square">Square · 1080 × 1080</option><option value="portrait">Portrait · 1080 × 1350</option><option value="landscape">Landscape · 1920 × 1080</option></select></label>
+        <label><span class="field-label">COLOR STORY</span><select id="grade"><option value="heat">MIAMI HEAT</option><option value="electric">ELECTRIC BLUE</option><option value="noir">NIGHT DRIVE</option></select></label>
+      </div>
+      <div class="actions"><button id="export" class="export"><span>Export poster</span><span>↗</span></button><button id="shuffle" class="shuffle" title="Use the sample scenes">↻</button></div>
+      <p class="privacy"><span>⌑</span> Photos stay on this device. No uploads, ever.</p>
+    </section>
+    <section class="stage" aria-label="Poster preview">
+      <div class="stage-head"><span>YOUR COVER</span><span class="drag-note">↔ DRAG PHOTOS TO REFRAME</span></div>
+      <div class="poster-shell"><canvas id="poster" width="840" height="840" aria-label="Poster preview"></canvas><div class="canvas-hint">MADE IN YOUR CITY · 26</div></div>
+      <div class="stage-foot"><span><i></i> LIVE PREVIEW</span><span id="dimensions">1080 × 1080 PX</span></div>
+    </section>
+  </main>
+  <div id="status" role="status" aria-live="polite"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
