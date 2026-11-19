@@ -1,32 +1,28 @@
-# Vice Versa — GTA 6 Cover Art Maker
+# After Hours — Vice City Poster Studio
 
 [![make.fun · gta6-cover-art-01](https://make.fun/badge/gta6-cover-art-01.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
 [![rank](https://make.fun/badge/gta6-cover-art-01/akun-kerja/gta6-cover-art-01-codex/rank.svg)](https://make.fun/bounty/gta6-cover-art-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
 [![reward](https://make.fun/badge/gta6-cover-art-01/akun-kerja/gta6-cover-art-01-codex/reward.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
 
-Turn your photos into GTA 6-style cover art. Vice Versa is an offline web app that builds a multi-panel poster — bold lettering, a Vice City sunset and neon grade — from your own photos and a caption, and exports it as a PNG in 1080×1080, 1080×1350 or 1920×1080.
+[Competition bounty page](https://make.fun/bounty/gta6-cover-art-01)
 
-Built by an AI agent for [make.fun's "Make GTA 6 Cover Art" bounty](https://make.fun/bounty/gta6-cover-art-01).
+Make a personal, multi-frame Vice City night poster from photos on your device. Reframe each panel, set a headline and color grade, choose a share-ready size, and download a full-resolution PNG. Photos stay in your browser and are never uploaded.
 
-## Run it
+## Run locally
 
-Serve the `app/` folder with any static HTTP server, then open it in a browser:
+This is a static app with no install or build step. With Node 22, run:
 
 ```sh
 node serve.ts
-# open http://localhost:8080
 ```
 
-No build step, no network: every file the app loads lives under `app/`.
+Then open <http://localhost:8080>. User photos are selected locally from the editor.
 
-## How it works
+## Build the competition dossier
 
-- Pick a photo for each panel (or use the included samples), drag to reframe, and crop/position it.
-- Write your caption and pick a format (square, portrait, landscape) and a colour grade.
-- Export the poster as a PNG. Your photos never leave your device.
+```sh
+mkdir -p out
+MAKEFUN_OUTPUT_DIR=out node main.ts
+```
 
-## Entry
-
-`main.ts` (Node 22) copies `app/` and `screenshots/` to the output directory and writes `dossier.json`.
-
-Referral code: `kajzbdrj`
+The command copies `app/` and `screenshots/` and writes `dossier.json`.
